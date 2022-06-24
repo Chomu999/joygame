@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>HTML Canvas Game joy-stick</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.gameScreen{
+
+/* border:1px solid blue; */
+
+}
+
+
+.joyStick{
+position:absolute;
+left:5px;
+bottom:10%;
+/* transform:translate(-50%,-50%); */
+border:1px solid blue;
+}
+
+
+#ui-bar,#load-bar{
+width:50vw;height:50vw;
+background:red;
+position:absolute;
+left:50%;
+top:50%;
+ transform:translate(-50%,-50%);
+border:1px solid blue;
+}
+
+p.start{
+color:blue;
+text-transform:capitalize;
+letter-spacing:1px;
+font-size:60px;
+text-align:center;
+}
+
+.loadin{
+width:50%;height:50%;
+background-color:purple;
+animation: loading 3s linear infinite;
+
+display: flex;
+justify-content:center;
+align-items:center;
+
+border-radius:104px 70px 40px 50px;
+/* transform:rotate(deg); */
+}
+
+@keyframes loading{
+
+0%{transform:rotateZ(0deg);}
+50%{transform:rotateZ(360deg);}
+100%{transform:rotateZ(0deg);}
+
+}
+
+
+.hide{
+display:none;
+}
+
+/* 
+CANVAS{
+display:none;
+}
+ */
+/* 
+div#btnBox{
+margin:0;padding:0;position:fixed;
+background-color:#FF7049;
+width:300px;height:300px;
+top:359px;left:33.51px;
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-gap:1px;
+opacity:70%;
+overflow:hidden;
+}
+
+
+.btn2{
+grid-column:2/3;
+grid-row:1/2;
+}
+
+.btn4{
+grid-column:1/2;
+grid-row:2/3;
+}
+
+.btn6{
+grid-column:3/4;
+grid-row:2/3;
+}
+
+
+.btn8{
+grid-column:2/3;
+grid-row:3/4;
+}
+
+
+
+.btns{
+background-color:rgba(0,0,0,0.06);
+border-radius:50%;
+box-shadow:0 0 4px inset black;
+}
+ */
+ 
+ 
+ 
+</style>
+
+
+
+
+</head>
+<body onload="progress()">
+
+
+
+<div id="ui-bar" class="hide hides">
+<p class="start hide hides">tap to start</p>
+</div>
+
+
+<div id="mainBox" class="hide hides">
+
+<canvas class="gameScreen hide hides"></canvas>
+
+
+<!-- 
+<canvas class="mapScreen hide hides"></canvas>
+ -->
+
+
+<canvas class="joyStick hide hides"></canvas>
+
+</div>
+
+
+
+
+
+<script src="js/customFun.js"></script>
+<script src="js/info.js"></script>
+<script src="js/controll.js"></script>
+<script src="js/main.js"></script>
+
+
+
+
+</body>
+</html>
